@@ -5,8 +5,8 @@
     <li
       v-for="(producto, posicion) in carrito"
       >
-      {{ producto.dsc }}
-
+      {{ producto.dsc }} ${{producto.precio}}
+<img width="100" class="team" v-bind:src="producto.foto">
       <button
         @click="quitarDelCarrito(posicion)">
         Quitar

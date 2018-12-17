@@ -4,14 +4,11 @@
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-  <b-navbar-brand href="#">Mi tienda</b-navbar-brand>
+  <b-navbar-brand  href="#">Tienda Online Veralda</b-navbar-brand>
 
   <b-collapse is-nav id="nav_collapse">
 
-    <b-navbar-nav>
-      <b-nav-item href="#">Link</b-nav-item>
-      <b-nav-item href="#" disabled>Disabled</b-nav-item>
-    </b-navbar-nav>
+    
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
@@ -36,6 +33,8 @@ export default {
 </script>
 
 <style>
+
+
 .carrito {
   width: 2em;
   height: 2em;
