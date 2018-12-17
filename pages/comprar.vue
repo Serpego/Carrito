@@ -3,8 +3,8 @@
 	<div>
 	<h4>Catálogo</h4>
 
-<ul>
-    <li
+<b-card-group>
+    <b-card
       v-for="producto in catalogo"
       :key="producto.id">
       {{ producto.dsc }} $ {{ producto.precio }} 
@@ -15,8 +15,8 @@
         Añadir al carrito
       </button>
 
-     </li>
-  </ul>
+     </b-card>
+  </b-card-group>
 
 	<!-- XXX: lo que ya tiene el carrito deberia ir en otro componente -->
 	<h4>Carrito de Veralda</h4>
@@ -28,11 +28,15 @@
 <script>
 import Carrito from '~/components/carrito.vue';
 var ProductosDePrueba= [
-  {id: 1, dsc: "ART: 522 BIKINI TOP SOFT.", precio: 390.00,foto: 'ver2.jpg'},
-  {id: 2, dsc: "ART: 500 BIKINI TRIANGULO.", precio:400.0, foto:'ver8.jpg'},
-{id: 3, dsc: "ART: 502 BIKINI TOP SOFT.", precio:450.00, foto:'ver10.jpg'},
-{id: 4, dsc: "ART: 5012 CONJ. SOFT CON COLA LESS.", precio:420.00, foto:'ver4.jpg'},
-{id: 5, dsc: "ART: 1148 CONJ. SOFT C/ COLA LESS.", precio:225.00, foto:'ver5.jpg'},
+  {id: 1, dsc: "ART: 522 BIKINI SOFT.", precio: 390.00,foto: 'ver2.jpg'},
+  {id: 2, dsc: "ART: 500 BIKINI ROJA.", precio:400.0, foto:'ver8.jpg'},
+{id: 3, dsc: "ART: 502 BIKINI TOP.", precio:450.00, foto:'ver10.jpg'},
+{id: 4, dsc: "ART: 501 PACK NEW", precio:420.00, foto:'ver4.jpg'},
+{id: 5, dsc: "ART: 119 BIKINI VARIADO.", precio:325.00, foto:'ver5.jpg'},
+{id: 6, dsc: "ART: 148 BIKINI NOCHE.", precio:425.00, foto:'ver3.jpg'},
+{id: 7, dsc: "ART: 111TOP BLANCO.", precio:225.00, foto:'ver6.jpg'},
+
+
 ]; //XXX: mover a store y api
 export default {
   name: "PagComprar",
@@ -61,9 +65,7 @@ h2{
 color:#52565E;
   font-family:verdana;
 }
-body{background:#D7D7D8;
 
-}
 ul{font-size:22px;
 }
 a{
