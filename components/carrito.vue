@@ -6,7 +6,7 @@
       v-for="(producto, posicion) in carrito"
       >
       {{ producto.dsc }} ${{producto.precio}}
-<img width="100" class="team" v-bind:src="producto.foto">
+      <b-img width="75" height="75" v-bind:src="producto.foto" thumbnail fluid alt="Thumbnail" />
       <button
         @click="quitarDelCarrito(posicion)">
         Quitar
@@ -20,7 +20,10 @@
 export default {
   name: "CmpCarrito",
   computed: { //U: propiedades que se calculan en base a otras
-		carrito () { return this.$store.getters["carrito/items"]; }
+		carrito () {
+    console.log(this.$store.getters["carrito/items"]);
+    return this.$store.getters["carrito/items"];
+    }
 	}, 
 	methods: { //U: acciones de botones, etc.
 		quitarDelCarrito: function (posicion) {
